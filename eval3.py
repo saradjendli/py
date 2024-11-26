@@ -43,12 +43,22 @@ def modifier_etat(id,etat,reseau):
 
 
 
+# def afficher_peripheriques_actifs(reseau):
+#     tous_actifs = all(reseau=="actif"
+#     for element in reseau.values())
+#     print(tous_actifs)
+
+# }
+
 def afficher_peripheriques_actifs(reseau):
-    tous_actifs = all(reseau=="actif"
-    for element in reseau.values())
-    print(tous_actifs)
-
-
+    ma_liste_actif=[]
+    for nom, valeur in reseau.values(): 
+        if valeur=="actif":
+            ma_liste_actif.append(valeur)
+            print(ma_liste_actif)
+        else:
+            print("il y en a pas des actifs")
+    
 
 
 
